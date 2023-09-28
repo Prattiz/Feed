@@ -1,13 +1,25 @@
 import { Avatar } from "../Avatar/avatar";
 import { Comments } from "../Comments/comments";
 import styles from "./Post.module.css";
+import { format, formatDistanceToNow} from "date-fns";
+import ptBR from "date-fns/locale/pt-BR"
 
-export function Post(){
+export function Post({author, publishedAt, content}){
+
+    const dateFormated = format(publishedAt, "dd 'de' LLLL 'as' HH:mm", {
+        locale:ptBR
+    })
+
+    const NowDay = formatDistanceToNow(publishedAt, {
+        locale:ptBR,
+        addSuffix:true
+    })
+
     return(
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <Avatar src="https://randomuser.me/api/portraits/women/2.jpg" />
+                    <Avatar src={author.avatarUrl} />
                     
                     <div className={styles.authorInfo}>
                         <strong>Jane Cooper</strong>
@@ -15,18 +27,23 @@ export function Post(){
                     </div>
                 </div>
 
-                <time title="" dateTime="">Publicado há 1hr</time>
+                <time title={dateFormated} dateTime={publishedAt.toISOString()}>{NowDay}</time>
             </header>
 
             <div className={styles.content}>
-                
-                   <p> Fala galeraa 👋 </p>
+                {
+                    content.map(line => {
+                        if (line.type == 'paragraph'){
 
-                   <p> Acabei de subir mais um projeto no meu portifa. 
-                    É um projeto que fiz para uma empresa.
-                    O nome do projeto é DoctorCare 🚀</p>
+                            return <p>{line.content}</p>
 
-                    <p><a href="#">jane.design/doctorcare</a></p>
+                        } else if (line.type == 'link'){
+
+                            return <p><a href="#">{line.content}</a></p>
+
+                        }
+                    })
+                }
             </div>
 
             <form className={styles.comments}>

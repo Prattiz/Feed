@@ -10,8 +10,8 @@ export function Sidebar(){
              />
 
              <div className={styles.profile}>
-                <Avatar src="https://github.com/Prattiz.png"/>
-                <strong>Thiago Pratti de Mendonça</strong>
+                <Avatar src="https://randomuser.me/api/portraits/men/9.jpg"/>
+                <strong>Albert Willstorm</strong>
                 <span>Web Developer</span>
              </div>
 
