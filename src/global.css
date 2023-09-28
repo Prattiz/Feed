@@ -41,6 +41,8 @@ a{
 
 button{
     cursor: pointer;
+    background: transparent;
+    border: none;
 }
 
 a:hover, button:hover{
