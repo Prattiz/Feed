@@ -75,6 +75,58 @@
     margin-bottom: 10px;
 }
 
+.comments{
+    width: 100%;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--gray_600);  
+}
+
+.comments footer{
+    visibility: hidden;
+    max-height: 0;
+}
+
+.comments:focus-within footer{
+    visibility: visible;
+    max-height: none;
+
+}
+
+.comments > strong{
+    line-height: 1.6;
+    color: var(--gray_100);
+}
+
+.comments textarea{
+    width: 100%;
+    background: var(--gray_900);
+    border: 0;
+    resize: none;
+    height: 7rem;
+    padding: 1.6rem;
+    border-radius: 10px;
+    color: var(--gray_100);
+    margin-top: 1.6rem;
+}
+
+.comments button[type=submit]{
+    padding: 1.6rem 2rem;
+    margin-top:1.6rem;
+    border-radius: 8px;
+    border: none;
+    background: var(--green_500);
+    font-weight: bold;
+    color:var(--white);
+}
+
+.comments button:hover{
+    background: var(--green_300);
+}
+
+
+
+
 
 
 
