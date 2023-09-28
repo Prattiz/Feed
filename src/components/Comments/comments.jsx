@@ -1,11 +1,12 @@
 import styles from "./comments.module.css";
 import { FaTrashAlt } from "react-icons/fa";
 import { BiSolidLike } from "react-icons/bi";
+import { Avatar } from "../Avatar/avatar";
 
 export function Comments(){
     return(
         <div className={styles.comment}>
-            <img src="https://github.com/Prattiz.png"/>
+            <Avatar hasBorder={false} src="https://github.com/Prattiz.png"/>
 
             <div className={styles.commentBox}>
 

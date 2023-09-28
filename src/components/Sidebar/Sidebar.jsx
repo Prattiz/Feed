@@ -1,3 +1,4 @@
+import { Avatar } from "../Avatar/avatar";
 import styles from "./Sidebar.module.css";
 import { TbPencilMinus } from "react-icons/tb";
 
@@ -9,7 +10,7 @@ export function Sidebar(){
              />
 
              <div className={styles.profile}>
-                <img className={styles.avatar} src="https://github.com/Prattiz.png" alt="" />
+                <Avatar src="https://github.com/Prattiz.png"/>
                 <strong>Thiago Pratti de Mendonça</strong>
                 <span>Web Developer</span>
              </div>
