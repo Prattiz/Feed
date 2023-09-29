@@ -14,7 +14,6 @@ Tecnologias Modernas: O projeto faz uso de tecnologias modernas, como React e Ty
 - React 
 - Node
 - JavaScript
-- TypeScript
 - HTML/CSS
 
 ## Imagens:
