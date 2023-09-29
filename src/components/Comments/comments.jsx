@@ -3,7 +3,7 @@ import { FaTrashAlt } from "react-icons/fa";
 import { BiSolidLike } from "react-icons/bi";
 import { Avatar } from "../Avatar/avatar";
 
-export function Comments(){
+export function Comments(props){
     return(
         <div className={styles.comment}>
             <Avatar hasBorder={false} src="https://github.com/Prattiz.png"/>
@@ -18,7 +18,7 @@ export function Comments(){
                         </div>
                         <button title="Deletar Comentário"><FaTrashAlt size={20}/></button>
                     </header>
-                    <p>Muito bom Jane, parabéns!! 👏👏</p>
+                    <p>{props.content}</p>
                 </div>
                 <footer>
                     <button><BiSolidLike/>

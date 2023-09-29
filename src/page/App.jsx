@@ -10,6 +10,7 @@ import { Post } from "../components/Posts/Post";
 const post = [
  
  {
+    id: 1,
     author: {
       avatarUrl: "https://randomuser.me/api/portraits/women/2.jpg",
       name: "Jane Cooper",
@@ -27,6 +28,8 @@ const post = [
   },
   
    {
+    id:2, 
+
     author: {
       avatarUrl: "https://randomuser.me/api/portraits/men/10.jpg",
       name: "Devon Lane",
@@ -57,6 +60,7 @@ export function App() {
           {post.map(post => {
            return(
             <Post
+              key={post.id}
               author={post.author}
               content={post.content}
               publishedAt={post.publishedAt}
