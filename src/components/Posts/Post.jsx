@@ -18,7 +18,8 @@ export function Post({author, publishedAt, content}){
     });
     
     const [comments, setComments] = useState([]);
-    const [ newCommentText, setNCT] = useState("")
+    const [ newCommentText, setNCT] = useState("");
+    const isNewCommentEmpty = newCommentText.length === 0;
     
     
 
@@ -91,7 +92,7 @@ export function Post({author, publishedAt, content}){
                 
                 <footer><button 
                 type="submit" 
-                disabled={newCommentText.length === 0}>
+                disabled={isNewCommentEmpty}>
                     Comentar
                 </button></footer>
                

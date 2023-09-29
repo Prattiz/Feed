@@ -12,6 +12,11 @@ Tecnologias Modernas: O projeto faz uso de tecnologias modernas, como React e Ty
 
 ## Tecnologias
 - React 
-- JavaScript 
+- Node
+- JavaScript
 - TypeScript
 - HTML/CSS
+
+## Imagens:
+
+![Captura de tela 2023-09-29 150533](https://github.com/Prattiz/Feed/assets/135062914/bf7124f6-7dea-49f0-85ee-0abc66d6b5dd)

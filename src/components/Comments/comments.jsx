@@ -2,11 +2,18 @@ import styles from "./comments.module.css";
 import { FaTrashAlt } from "react-icons/fa";
 import { BiSolidLike } from "react-icons/bi";
 import { Avatar } from "../Avatar/avatar";
+import { useState } from "react";
 
 export function Comments({content, deleteComment }){
 
+    const [likeCount, setLikeCount ] = useState(0)
+
     function handleRemoveComment(){
         deleteComment(content)
+    }
+
+    function handleLikeCount(){
+        setLikeCount(likeCount + 1)
     }
     return(
         <div className={styles.comment}>
@@ -25,8 +32,8 @@ export function Comments({content, deleteComment }){
                     <p>{content}</p>
                 </div>
                 <footer>
-                    <button><BiSolidLike/>
-                    Aplaudir <span>20</span>
+                    <button onClick={handleLikeCount}>
+                        <BiSolidLike/> Aplaudir <span>{likeCount}</span>
                     </button>
                 </footer>
 
