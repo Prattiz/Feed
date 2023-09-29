@@ -3,7 +3,11 @@ import { FaTrashAlt } from "react-icons/fa";
 import { BiSolidLike } from "react-icons/bi";
 import { Avatar } from "../Avatar/avatar";
 
-export function Comments(props){
+export function Comments({content, deleteComment }){
+
+    function handleRemoveComment(){
+        deleteComment(content)
+    }
     return(
         <div className={styles.comment}>
             <Avatar hasBorder={false} src="https://github.com/Prattiz.png"/>
@@ -16,9 +20,9 @@ export function Comments(props){
                             <strong>Thiago Pratti de Mendonça</strong>
                             <time>Cerca de 2hr atrás</time>
                         </div>
-                        <button title="Deletar Comentário"><FaTrashAlt size={20}/></button>
+                        <button onClick={handleRemoveComment}  title="Deletar Comentário"><FaTrashAlt size={20}/></button>
                     </header>
-                    <p>{props.content}</p>
+                    <p>{content}</p>
                 </div>
                 <footer>
                     <button><BiSolidLike/>

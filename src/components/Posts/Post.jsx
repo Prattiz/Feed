@@ -32,7 +32,20 @@ export function Post({author, publishedAt, content}){
     }
 
     function handleNewComentChange(){
+        event.target.setCustomValidity("")
         setNCT(event.target.value)
+    }
+
+    function deleteComment(Dcomment){
+        const commentsWithoutDel = comments.filter(comment =>{
+            return comment !== Dcomment
+        })
+
+        setComments(commentsWithoutDel)
+    }
+
+    function handleInvalid(){
+        event.target.setCustomValidity("Preencha o campo para comentar")
     }
 
     return(
@@ -42,8 +55,8 @@ export function Post({author, publishedAt, content}){
                     <Avatar src={author.avatarUrl} />
                     
                     <div className={styles.authorInfo}>
-                        <strong>Jane Cooper</strong>
-                        <span>UI Design</span>
+                        <strong>{author.name}</strong>
+                        <span>{author.role}</span>
                     </div>
                 </div>
 
@@ -72,16 +85,22 @@ export function Post({author, publishedAt, content}){
                 name="comment"
                 onChange={handleNewComentChange}
                 value={newCommentText}
+                required
+                onInvalid={handleInvalid}
                 />
                 
-                <footer><button type="submit">Comentar</button></footer>
+                <footer><button 
+                type="submit" 
+                disabled={newCommentText.length === 0}>
+                    Comentar
+                </button></footer>
                
             </form>
 
             <div className={styles.commentList}>
                 {
                     comments.map(comment => {
-                        return <Comments  key={comment} content={comment}/>
+                        return <Comments  key={comment} deleteComment={deleteComment} content={comment}/>
                     })
                 }
             </div>

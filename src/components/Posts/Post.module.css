@@ -120,8 +120,9 @@
     color:var(--white);
 }
 
-.comments button:hover{
-    background: var(--green_300);
+.comments button:disabled{
+    opacity: 0.7;
+    cursor: not-allowed; 
 }
 
 .commentList{

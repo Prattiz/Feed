@@ -44,8 +44,6 @@ const post = [
 
     publishedAt: new Date("2023-08-25 18:30:00")
   },
-
-  
 ]
 
 export function App() {
