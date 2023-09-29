@@ -20,4 +20,5 @@ Tecnologias Modernas: O projeto faz uso de tecnologias modernas, como React e Ty
 ## Imagens:
 
 ![Captura de tela 2023-09-29 150533](https://github.com/Prattiz/Feed/assets/135062914/bf7124f6-7dea-49f0-85ee-0abc66d6b5dd)
-![Captura de tela 2023-09-29 150918](https://github.com/Prattiz/Feed/assets/135062914/9ee03977-c446-4f8b-a233-e0c8840961aa)
+<br/>
+![Captura de tela 2023-09-29 151154](https://github.com/Prattiz/Feed/assets/135062914/a5e2ebde-6dc3-4c39-9c45-8f39dd545454)
